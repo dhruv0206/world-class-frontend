@@ -153,3 +153,7 @@ transition: all 0.3s ease;
 
 *This file is updated by `frontend-taste-learner` each run.*
 *Last updated: bootstrap*
+# Animation Patterns
+[PROVEN] Cinematic Scroll-jacking (Arc)
+[PROVEN] Border beam animations (Resend)
+[PROVEN] Spring-based micro-interactions (Raycast)

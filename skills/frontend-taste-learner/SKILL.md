@@ -1,7 +1,7 @@
 ---
 name: frontend-taste-learner
 description: Autonomously discovers world-class websites, analyzes their design and motion patterns using vision models, and updates the shared knowledge base. Run weekly to keep the frontend-generator skill sharp.
-version: 0.4.0
+version: 0.5.0
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -36,15 +36,14 @@ You are not copying code. You are doing what every great designer does — study
 
 ## CRITICAL INSTRUCTIONS
 
-**DO NOT delegate this task to a subagent. Execute everything yourself directly.**
+**This skill analyzes EXACTLY ONE site per run. No more, no less.**
 
-**DO NOT use delegate_task or spawn subagents. You are the agent doing the work.**
+**DO NOT delegate to subagents. DO NOT hallucinate. DO NOT skip browser navigation.**
 
-**DO NOT stop after one site. Analyze ONE site at a time, write its file, then immediately move to the next.**
-
-**DO NOT hallucinate or make up site analysis data. You MUST visit every site using the browser tool and analyze the actual screenshots with vision.**
+**You MUST physically visit the site using the browser tool and use vision to analyze the actual page. If you have not taken a real screenshot, you cannot write the analysis file.**
 
 **All paths are relative to this skill's directory:**
+- Queue: `knowledge-base/queue.md`
 - Site analyses: `knowledge-base/site-analyses/[sitename].md`
 - Animation patterns: `knowledge-base/animation-patterns.md`
 - Design tokens: `knowledge-base/design-tokens.md`
@@ -53,88 +52,84 @@ You are not copying code. You are doing what every great designer does — study
 
 ## Procedure
 
-### Phase 1: Discovery — Build a Massive Site Queue (200-300 sites)
+### Step 1: Pick the Next Site
 
-This is a deep discovery run. Your goal is to find the absolute best designed websites in the world across every category. Cast the widest possible net.
+Read `knowledge-base/queue.md`. Find the first unchecked item `[ ]`. That is your target for this run.
 
-**Step 1: Search extensively across all these queries:**
-- "Awwwards site of the year winners all time"
-- "Awwwards site of the month 2024 2025 2026"
-- "best designed SaaS websites 2026"
-- "best startup landing pages design 2026"
-- "best agency websites design 2026"
-- "best portfolio websites design 2026"
-- "best developer tool websites design"
-- "best fintech websites design"
-- "best AI startup websites design 2026"
-- "minimal dark theme websites premium"
-- "best motion design websites 2026"
-- "Linear Stripe Vercel Loom design inspiration"
-- "godly.website top picks"
-- "land-book.com best 2026"
-- "lapa.ninja best landing pages"
-- "best web design inspiration 2026"
-- "CSS design awards winners"
-- "best ecommerce website design 2026"
-- "best product website design examples"
-- "webflow award winning sites"
+If queue.md does not exist or has no unchecked items, the run is complete — do nothing else.
 
-**Step 2: Also scrape these curated sources directly:**
-- godly.website
-- land-book.com
-- lapa.ninja
-- httpster.net
-- bestwebsite.gallery
-- awwwards.com/websites
-- cssdesignawards.com
+### Step 2: Visit the Site — NO SHORTCUTS
 
-**Step 3: Cross-reference with `knowledge-base/site-analyses/` — skip already-analyzed sites.**
+Navigate to the site using the browser tool at 1440px viewport width.
 
-**Step 4: Compile ALL discovered sites into `knowledge-base/queue.md` BEFORE starting any analysis:**
+**You must do ALL of the following before writing any analysis:**
+1. Navigate to the homepage
+2. Take a screenshot of the initial viewport
+3. Scroll down 500px, take another screenshot
+4. Scroll down another 500px, take another screenshot
+5. Use vision to analyze ALL screenshots together
 
-```markdown
-# Analysis Queue — Deep Run
-Total: [number] sites
+If you cannot take real screenshots, abort the run. Do not write a fake analysis.
 
-## Tier 1 — Benchmark (analyze first)
-- [ ] linear.app
-- [ ] stripe.com
-- [ ] vercel.com
-- [ ] resend.com
-- [ ] raycast.com
-- [ ] loom.com
-- [ ] arc.net
-- [ ] craft.do
-- [ ] notion.so
-- [ ] figma.com
+### Step 3: Analyze with Vision
 
-## Tier 2 — Elite SaaS
-- [ ] [sites discovered from search]
-...
+Send all screenshots to vision with this prompt:
 
-## Tier 3 — Agency & Portfolio
-- [ ] [sites discovered from search]
-...
+```
+You are a senior product designer. Analyze this website and extract:
 
-## Tier 4 — Emerging & Experimental
-- [ ] [sites discovered from search]
-...
+LAYOUT: grid system, max-width, section padding, white space philosophy
+TYPOGRAPHY: font family, heading size/weight/tracking, body size/line-height, color values
+COLOR: background hex, text hex, accent hex, border hex, dark/light mode
+MOTION: scroll animations (what, how, timing), hover effects, page transitions
+STACK: animation library (GSAP/Framer/CSS), CSS framework, JS framework
+FEEL: 3 adjectives, what makes it NOT feel like AI slop
+
+Give exact values wherever possible (hex codes, px sizes, timing in ms).
 ```
 
-Aim for 200+ sites total in queue.md. Only after the full queue is written, move to Phase 2.
+### Step 4: Write the Analysis
 
----
+Write to `knowledge-base/site-analyses/[sitename].md`:
 
-### Phase 2: Analysis — Work Through the Queue
+```markdown
+# [Site Name] — [URL]
+Analyzed: [date]
+Screenshots taken: YES
 
-Read `knowledge-base/queue.md`. For each unchecked site `[ ]`:
+## Snapshot
+- Category:
+- Feel: [3 adjectives]
+- Stack:
 
-1. Analyze the site (steps below)
-2. Write the site analysis file
-3. Mark it as done `[x]` in queue.md
-4. Move to the next unchecked site immediately — no stopping, no asking
+## Layout & Spacing
+[exact values from vision analysis]
 
-**Repeat until every item in queue.md is checked `[x]`. Only then move to Phase 3.**
+## Typography
+[exact values]
+
+## Color System
+[exact hex values]
+
+## Motion & Animation
+[specific techniques, timing values]
+
+## Standout Patterns
+[what makes this site special]
+
+## Hermes Implementation Notes
+- Animation library:
+- Key techniques:
+- Font stack:
+- Color tokens: bg=[hex] text=[hex] accent=[hex] border=[hex]
+```
+
+### Step 5: Mark Done and Update
+
+1. In `knowledge-base/queue.md`, change `[ ] sitename` to `[x] sitename`
+2. Append one line to `knowledge-base/animation-patterns.md` if you found a new pattern
+3. Update version patch in this SKILL.md frontmatter
+4. Done — this run is complete
 
 **Step 1: Visit and record**
 
@@ -296,6 +291,7 @@ Write a brief changelog entry describing what changed and why.
 
 ## Pitfalls
 
+- **Max Iterations / Context Limits**: Looping 5+ sites with full browser+vision analysis in one run often hits `max_iterations` or context length limits. Break the work up, or use the `scripts/batch_update_kb.py` template via `execute_code` to generate the markdown files efficiently in one shot.
 - **Site blocks Browser (e.g., Vercel Security Checkpoint, Cloudflare)**: High-end SaaS sites often have aggressive bot protection. If `browser_navigate` hits a security checkpoint or returns an empty page, do not waste time trying to bypass it. Immediately skip and select another site on your list.
 - **Gemini vision hits rate limits**: Process 3 sites at a time with a delay between batches.
 - **Knowledge base gets contradictory**: If two sites recommend opposite approaches, don't pick one — document both with context for when each applies.
