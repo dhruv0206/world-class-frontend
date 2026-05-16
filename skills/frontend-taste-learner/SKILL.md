@@ -1,7 +1,7 @@
 ---
 name: frontend-taste-learner
 description: Autonomously discovers world-class websites, analyzes their design and motion patterns using vision models, and updates the shared knowledge base. Run weekly to keep the frontend-generator skill sharp.
-version: 0.1.0
+version: 0.2.0
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -34,6 +34,19 @@ You are not copying code. You are doing what every great designer does — study
 - Run manually when the user says "update frontend knowledge" or "learn new design patterns"
 - Run after a new wave of standout sites appears (Awwwards SOTM, Product Hunt launches, design Twitter moments)
 
+## CRITICAL INSTRUCTIONS
+
+**DO NOT STOP after analyzing one site. You must analyze a MINIMUM of 5 sites per run before moving to Phase 3.**
+
+**DO NOT ask for confirmation between sites. Loop through ALL sites autonomously.**
+
+**All knowledge base paths are relative to the skill root. Use these exact paths:**
+- Site analyses: `../../knowledge-base/site-analyses/[sitename].md`
+- Animation patterns: `../../knowledge-base/animation-patterns.md`
+- Design tokens: `../../knowledge-base/design-tokens.md`
+- Library guide: `../../knowledge-base/library-guide.md`
+- Generator skill: `../../skills/frontend-generator/SKILL.md`
+
 ## Procedure
 
 ### Phase 1: Discovery — Find New World-Class Sites
@@ -58,18 +71,20 @@ Search for sites you haven't analyzed yet. Cast a wide net:
    - bestwebsite.gallery
    - godly.website
 
-3. Cross-reference with knowledge-base/site-analyses/ — skip sites already analyzed.
+3. Cross-reference with `../../knowledge-base/site-analyses/` — skip sites already analyzed.
 
-4. Build a list of 5–15 new sites to analyze this run. Prioritize:
+4. Build a list of 8–15 new sites to analyze this run. Prioritize:
    - Sites referenced multiple times across sources
    - Sites that appear visually distinct from what's already in the knowledge base
    - Sites with strong motion/animation reputation
 
+5. **Store this full list before starting analysis. You will loop through every site on the list.**
+
 ---
 
-### Phase 2: Analysis — Watch, Inspect, Understand
+### Phase 2: Analysis — Watch, Inspect, Understand (LOOP THROUGH ALL SITES)
 
-For each site in your list, do the following:
+**For EACH site in your list, repeat all steps below. Do not stop until every site is analyzed.**
 
 **Step 1: Visit and record**
 
@@ -156,7 +171,7 @@ Also check `<script>` tags and network requests for recognizable bundle names.
 
 **Step 1: Write site analysis**
 
-Create `knowledge-base/site-analyses/[sitename].md` with this structure:
+Create `../../knowledge-base/site-analyses/[sitename].md` with this structure:
 
 ```markdown
 # [Site Name] — [URL]
@@ -191,21 +206,21 @@ Analyzed: [date]
 
 **Step 2: Update pattern library**
 
-Read `knowledge-base/animation-patterns.md`. If you discovered any new or better techniques this run, add them. If a technique appeared on 3+ sites, mark it as a `[PROVEN]` pattern.
+Read `../../knowledge-base/animation-patterns.md`. If you discovered any new or better techniques this run, add them. If a technique appeared on 3+ sites, mark it as a `[PROVEN]` pattern.
 
 **Step 3: Update design tokens**
 
-Read `knowledge-base/design-tokens.md`. Update with any new spacing systems, type scales, or color approaches you found.
+Read `../../knowledge-base/design-tokens.md`. Update with any new spacing systems, type scales, or color approaches you found.
 
 **Step 4: Update library guide**
 
-Read `knowledge-base/library-guide.md`. If you found new evidence for when to use which library (e.g. "5 of the most cinematic sites use GSAP ScrollTrigger, not Framer Motion"), update the recommendations.
+Read `../../knowledge-base/library-guide.md`. If you found new evidence for when to use which library (e.g. "5 of the most cinematic sites use GSAP ScrollTrigger, not Framer Motion"), update the recommendations.
 
 ---
 
 ### Phase 4: Self-Improve — Update the Generator Skill
 
-Read `skills/frontend-generator/SKILL.md`. Based on what you learned this run:
+Read `../../skills/frontend-generator/SKILL.md`. Based on what you learned this run:
 
 1. If you found a better default animation library recommendation, update it
 2. If you found a new pattern that should be in the generator's defaults, add it
@@ -238,8 +253,11 @@ Write a brief changelog entry describing what changed and why.
 
 ## Verification
 
-After each run, the knowledge base should have:
-- At least 3 new site-analyses files
-- An updated CHANGELOG.md entry
-- Incremented version number
-- At least one update to animation-patterns.md or library-guide.md
+**This run is NOT complete until ALL of the following are true:**
+- At least 5 new files exist in `../../knowledge-base/site-analyses/`
+- `../../knowledge-base/animation-patterns.md` has been updated with new findings
+- `../../knowledge-base/design-tokens.md` has been updated
+- CHANGELOG.md has a new entry
+- Version number incremented
+
+If any of these are missing, continue analyzing more sites before stopping.
