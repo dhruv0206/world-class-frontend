@@ -1,7 +1,7 @@
 ---
 name: frontend-taste-learner
 description: Autonomously discovers world-class websites, analyzes their design and motion patterns using vision models, and updates the shared knowledge base. Run weekly to keep the frontend-generator skill sharp.
-version: 0.5.0
+version: 0.6.0
 author: hermes-frontend-skill
 license: MIT
 metadata:

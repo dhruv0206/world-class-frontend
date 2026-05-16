@@ -157,3 +157,7 @@ transition: all 0.3s ease;
 [PROVEN] Cinematic Scroll-jacking (Arc)
 [PROVEN] Border beam animations (Resend)
 [PROVEN] Spring-based micro-interactions (Raycast)
+
+[PROVEN] Glowing neon borders on dark cards (Supabase)
+[PROVEN] Interactive playground widgets in hero (Clerk)
+[PROVEN] Scroll-linked narrative with glowing lines (GitHub)

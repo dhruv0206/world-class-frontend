@@ -130,3 +130,6 @@ Content padding X:  px-6 mobile, px-8 tablet, container centered desktop
 - Pure Black (#000000) for SaaS dark mode (Linear, Resend, Vercel)
 - High-contrast 1px borders (#333333 on #000000)
 - Typography: Geist, Inter, system-ui
+
+- Deep space dark background (#0D1117) with glowing accents (GitHub)
+- Typography: Mona Sans variable font (GitHub), IBM Plex Mono (Replit)
