@@ -36,11 +36,15 @@ You are not copying code. You are doing what every great designer does — study
 
 ## CRITICAL INSTRUCTIONS
 
-**DO NOT STOP after analyzing one site. You must analyze a MINIMUM of 5 sites per run before moving to Phase 3.**
+**DO NOT delegate this task to a subagent. Execute everything yourself directly.**
 
-**DO NOT ask for confirmation between sites. Loop through ALL sites autonomously.**
+**DO NOT use delegate_task or spawn subagents. You are the agent doing the work.**
 
-**All knowledge base paths are relative to the skill root. Use these exact paths:**
+**DO NOT stop after one site. Analyze ONE site at a time, write its file, then immediately move to the next.**
+
+**DO NOT hallucinate or make up site analysis data. You MUST visit every site using the browser tool and analyze the actual screenshots with vision.**
+
+**All paths are relative to this skill's directory:**
 - Site analyses: `knowledge-base/site-analyses/[sitename].md`
 - Animation patterns: `knowledge-base/animation-patterns.md`
 - Design tokens: `knowledge-base/design-tokens.md`
