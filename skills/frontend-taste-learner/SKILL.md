@@ -58,34 +58,78 @@ Read `knowledge-base/queue.md`. Find the first unchecked item `[ ]`. That is you
 
 If queue.md does not exist or has no unchecked items, the run is complete — do nothing else.
 
-### Step 2: Visit the Site — NO SHORTCUTS
+### Step 2: Visit the Site — FULL PAGE CAPTURE
 
-Navigate to the site using the browser tool at 1440px viewport width.
+Navigate to the site using the browser tool at **1440px width**.
 
-**You must do ALL of the following before writing any analysis:**
-1. Navigate to the homepage
-2. Take a screenshot of the initial viewport
-3. Scroll down 500px, take another screenshot
-4. Scroll down another 500px, take another screenshot
-5. Use vision to analyze ALL screenshots together
+**You must capture the ENTIRE page before writing any analysis. Do ALL of the following:**
 
-If you cannot take real screenshots, abort the run. Do not write a fake analysis.
+1. Navigate to the homepage. Wait 2 seconds for animations to load.
+2. Take screenshot of initial viewport (hero section)
+3. Scroll down 600px. Take screenshot.
+4. Scroll down another 600px. Take screenshot.
+5. Scroll down another 600px. Take screenshot.
+6. Scroll down another 600px. Take screenshot.
+7. Scroll to bottom of page. Take screenshot.
+8. Use browser DevTools (via execute_code or browser console) to extract:
+   - `document.documentElement.scrollHeight` — full page height
+   - All font families: `[...new Set([...document.querySelectorAll('*')].map(el => getComputedStyle(el).fontFamily))].slice(0,5)`
+   - Background color: `getComputedStyle(document.body).backgroundColor`
+   - Check for libraries: `!!window.gsap, !!window.__framer_importFromPackage, !!window.Lenis`
+9. Also visit the pricing page (if exists) and take 1 screenshot
+10. Also visit a features/product page (if exists) and take 1 screenshot
+
+**Minimum 6 screenshots required. If you have fewer, keep scrolling and screenshotting.**
+
+If you cannot take real screenshots, abort. Do not write a fake analysis.
 
 ### Step 3: Analyze with Vision
 
-Send all screenshots to vision with this prompt:
+Send ALL screenshots together to vision. Also include the DevTools data you extracted.
 
 ```
-You are a senior product designer. Analyze this website and extract:
+You are a senior product designer building a design knowledge base. I am giving you 6+ screenshots of [SITE] covering the full page from top to bottom, plus raw DevTools data.
 
-LAYOUT: grid system, max-width, section padding, white space philosophy
-TYPOGRAPHY: font family, heading size/weight/tracking, body size/line-height, color values
-COLOR: background hex, text hex, accent hex, border hex, dark/light mode
-MOTION: scroll animations (what, how, timing), hover effects, page transitions
-STACK: animation library (GSAP/Framer/CSS), CSS framework, JS framework
-FEEL: 3 adjectives, what makes it NOT feel like AI slop
+Analyze everything and extract EXACT values:
 
-Give exact values wherever possible (hex codes, px sizes, timing in ms).
+LAYOUT
+- Max-width container (px)
+- Section vertical padding (px)  
+- Grid columns and gutter width
+- White space approach (tight/balanced/generous)
+- Any unique layout patterns (bento grid, asymmetric, full-bleed, etc.)
+
+TYPOGRAPHY (exact values)
+- H1: font-family, size (px or vw), weight, letter-spacing, line-height
+- H2: same
+- Body: font-family, size (px), weight, line-height, color
+- Any accent/mono/display fonts used
+
+COLOR SYSTEM (exact hex values)
+- Page background: #
+- Primary text: #
+- Secondary text: #
+- Accent/brand: #
+- Border/divider: #
+- Card background: #
+- Is it dark or light mode by default?
+
+MOTION & ANIMATION (be specific)
+- Hero animation: what happens on load?
+- Scroll animations: what elements animate, how (fade/slide/scale), duration estimate
+- Hover effects: what changes on hover?
+- Any special effects (parallax, magnetic, cursor, canvas, WebGL)?
+- Overall motion personality (subtle/expressive/cinematic)
+
+STACK (from DevTools data provided)
+- JS framework detected
+- Animation library detected
+- CSS approach
+
+WHAT MAKES IT NOT FEEL LIKE AI
+- List 3-5 specific design decisions that elevate this above generic output
+
+Give real values. If you cannot determine an exact value from screenshots, say "unclear" rather than guessing.
 ```
 
 ### Step 4: Write the Analysis
