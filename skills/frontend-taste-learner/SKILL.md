@@ -49,32 +49,75 @@ You are not copying code. You are doing what every great designer does — study
 
 ## Procedure
 
-### Phase 1: Discovery — Build Your Site Queue
+### Phase 1: Discovery — Build a Massive Site Queue (200-300 sites)
 
-Search for world-class sites. Cross-reference with `../../knowledge-base/site-analyses/` to skip already-analyzed ones.
+This is a deep discovery run. Your goal is to find the absolute best designed websites in the world across every category. Cast the widest possible net.
 
-Search queries to use:
+**Step 1: Search extensively across all these queries:**
+- "Awwwards site of the year winners all time"
+- "Awwwards site of the month 2024 2025 2026"
 - "best designed SaaS websites 2026"
-- "Awwwards site of the month 2026"
-- "minimal startup websites premium design"
-- "best landing pages 2026"
-- "Linear Stripe Vercel design inspiration"
+- "best startup landing pages design 2026"
+- "best agency websites design 2026"
+- "best portfolio websites design 2026"
+- "best developer tool websites design"
+- "best fintech websites design"
+- "best AI startup websites design 2026"
+- "minimal dark theme websites premium"
+- "best motion design websites 2026"
+- "Linear Stripe Vercel Loom design inspiration"
+- "godly.website top picks"
+- "land-book.com best 2026"
+- "lapa.ninja best landing pages"
+- "best web design inspiration 2026"
+- "CSS design awards winners"
+- "best ecommerce website design 2026"
+- "best product website design examples"
+- "webflow award winning sites"
 
-**BEFORE doing any analysis, write a file called `../../knowledge-base/queue.md` with your full list of 8-10 sites to analyze this run, like this:**
+**Step 2: Also scrape these curated sources directly:**
+- godly.website
+- land-book.com
+- lapa.ninja
+- httpster.net
+- bestwebsite.gallery
+- awwwards.com/websites
+- cssdesignawards.com
 
-```
-# Analysis Queue
+**Step 3: Cross-reference with `../../knowledge-base/site-analyses/` — skip already-analyzed sites.**
+
+**Step 4: Compile ALL discovered sites into `../../knowledge-base/queue.md` BEFORE starting any analysis:**
+
+```markdown
+# Analysis Queue — Deep Run
+Total: [number] sites
+
+## Tier 1 — Benchmark (analyze first)
 - [ ] linear.app
 - [ ] stripe.com
 - [ ] vercel.com
 - [ ] resend.com
 - [ ] raycast.com
-- [ ] craft.do
 - [ ] loom.com
 - [ ] arc.net
+- [ ] craft.do
+- [ ] notion.so
+- [ ] figma.com
+
+## Tier 2 — Elite SaaS
+- [ ] [sites discovered from search]
+...
+
+## Tier 3 — Agency & Portfolio
+- [ ] [sites discovered from search]
+...
+
+## Tier 4 — Emerging & Experimental
+- [ ] [sites discovered from search]
+...
 ```
 
-Only after writing queue.md, move to Phase 2.
+Aim for 200+ sites total in queue.md. Only after the full queue is written, move to Phase 2.
 
 ---
 
