@@ -146,6 +146,24 @@ tailwind.config.ts   ← custom design tokens
 - Box shadows on everything
 - Hover animations that change layout (width, height changes)
 
+**MANDATORY PAGE STRUCTURE — landing pages must have all of these sections**
+
+A "world-class landing page" is NOT a hero + footer. It is at minimum 6 distinct sections, each with real content and visual treatment. If the output is just nav + hero + footer with empty void below, IT IS A FAILED SAMPLE.
+
+Required sections in order:
+1. **Nav** — logo, 4-6 links, primary CTA
+2. **Hero** — headline (max 2 lines), subhead (max 2 lines), 2 CTAs, supporting visual (announcement pill, glow, gradient mesh, product mockup, OR animated graphic)
+3. **Logos / Social proof** — "Trusted by" row of 6-10 customer logos (use real-looking SVG wordmarks, not generic icons)
+4. **Feature highlights** — 3-6 feature cards or a bento grid. Each card has: icon/visual, title, 1-2 sentence description. NO generic Lucide icons — use small custom SVGs or screenshots of made-up product UI.
+5. **Product showcase / Code or UI demo** — a section showing the product in action. For developer tools: a code block with syntax highlighting. For SaaS: a fake dashboard screenshot or UI panel. For agencies: a featured project image.
+6. **Stats or comparison** — numbers ("99.99% uptime, 4M+ deployments"), OR a comparison table, OR pricing tier preview
+7. **Secondary CTA** — large centered call-to-action with headline + button before footer
+8. **Footer** — 4-column link grid (Product / Company / Resources / Legal), brand mark, social icons
+
+Implement the **Standout Patterns** from the site analysis. If the analysis mentions "animated globe with node pulses," build a representation of that. If it mentions "bento grid with glowing borders," build one. The analysis is the brief — extract those visual concepts and reproduce them, don't ignore them in favor of color tokens alone.
+
+Single-file HTML samples must still hit all 8 sections. Use inline SVG for logos/icons, use CSS gradients for visual sections, use CSS animations for motion. No "TODO: add screenshot here" placeholders.
+
 ---
 
 ### Step 5: Write the Code

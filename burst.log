@@ -1,0 +1,842 @@
+﻿=== Burst started 05/16/2026 19:07:12 ===
+=== Run 1 / 30 started 19:07:12 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 1 finished 19:07:15 ===
+=== Run 2 / 30 started 19:07:15 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 2 finished 19:07:17 ===
+=== Run 3 / 30 started 19:07:17 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 3 finished 19:07:19 ===
+=== Run 4 / 30 started 19:07:19 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 4 finished 19:07:21 ===
+=== Run 5 / 30 started 19:07:21 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 5 finished 19:07:22 ===
+=== Run 6 / 30 started 19:07:22 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 6 finished 19:07:24 ===
+=== Run 7 / 30 started 19:07:24 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 7 finished 19:07:25 ===
+=== Run 8 / 30 started 19:07:25 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 8 finished 19:07:27 ===
+=== Run 9 / 30 started 19:07:27 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 9 finished 19:07:28 ===
+=== Run 10 / 30 started 19:07:28 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 10 finished 19:07:30 ===
+=== Run 11 / 30 started 19:07:30 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 11 finished 19:07:32 ===
+=== Run 12 / 30 started 19:07:32 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 12 finished 19:07:33 ===
+=== Run 13 / 30 started 19:07:33 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 13 finished 19:07:35 ===
+=== Run 14 / 30 started 19:07:35 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 14 finished 19:07:36 ===
+=== Run 15 / 30 started 19:07:36 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 15 finished 19:07:38 ===
+=== Run 16 / 30 started 19:07:38 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 16 finished 19:07:40 ===
+=== Run 17 / 30 started 19:07:40 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 17 finished 19:07:41 ===
+=== Run 18 / 30 started 19:07:41 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 18 finished 19:07:43 ===
+=== Run 19 / 30 started 19:07:43 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 19 finished 19:07:45 ===
+=== Run 20 / 30 started 19:07:45 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 20 finished 19:07:46 ===
+=== Run 21 / 30 started 19:07:46 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 21 finished 19:07:48 ===
+=== Run 22 / 30 started 19:07:48 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 22 finished 19:07:50 ===
+=== Run 23 / 30 started 19:07:50 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 23 finished 19:07:51 ===
+=== Run 24 / 30 started 19:07:51 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 24 finished 19:07:53 ===
+=== Run 25 / 30 started 19:07:53 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 25 finished 19:07:54 ===
+=== Run 26 / 30 started 19:07:54 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 26 finished 19:07:56 ===
+=== Run 27 / 30 started 19:07:56 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 27 finished 19:07:58 ===
+=== Run 28 / 30 started 19:07:58 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 28 finished 19:08:00 ===
+=== Run 29 / 30 started 19:08:00 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 29 finished 19:08:02 ===
+=== Run 30 / 30 started 19:08:02 ===
+hermes.exe : Traceback (most recent call last):
+At line:1 char:310
++ ... oding utf8; & "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe\__main__.py", line 10, in <module>
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\main.py", line 12359, in main
+    run_oneshot(
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 181, in run_oneshot
+    response = _run_agent(
+               ^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\oneshot.py", line 290, in _run_agent
+    runtime = resolve_runtime_provider(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\runtime_provider.py", line 1024, in 
+resolve_runtime_provider
+    provider = resolve_provider(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhruv\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 1488, in resolve_provider
+    raise AuthError(
+hermes_cli.auth.AuthError: No inference provider configured. Run 'hermes model' to choose a provider and model, or set 
+an API key (OPENROUTER_API_KEY, OPENAI_API_KEY, etc.) in ~/.hermes/.env.
+=== Run 30 finished 19:08:03 ===
+=== Burst complete 05/16/2026 19:08:03 ===

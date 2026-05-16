@@ -10,7 +10,7 @@ Total: 100 sites across 8 tiers
 
 ## Tier 2 — Elite Dev Tools
 - [x] vercel.com
-- [ ] linear.app
+- [x] linear.app
 - [ ] stripe.com
 - [ ] anthropic.com
 - [ ] resend.com
