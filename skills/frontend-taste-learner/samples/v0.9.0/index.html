@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Resend Analysis Sample</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#000000',
+                        foreground: '#ffffff',
+                        border: '#1a1a1a',
+                        surface: '#0a0a0a',
+                        muted: '#888888'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Geist Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.foreground');
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: theme('colors.surface');
+            border: 1px solid theme('colors.border');
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .card:hover {
+            border-color: #333;
+        }
+        
+        .code-window {
+            background: #000;
+            border: 1px solid theme('colors.border');
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .code-header {
+            border-bottom: 1px solid theme('colors.border');
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen pt-32 pb-24 px-6 md:px-12 flex flex-col items-center">
+    
+    <main class="w-full max-w-5xl mx-auto flex flex-col gap-24">
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">
+                Next-generation<br>API platform.
+            </h1>
+            <p class="text-xl text-muted mb-10">
+                A simple, elegant interface so you can start integrating in minutes. It fits right into your code with SDKs for your favorite programming languages.
+            </p>
+            <div class="flex gap-4 justify-center">
+                <button class="bg-white text-black px-5 py-2.5 rounded-md font-medium hover:bg-gray-200 transition-colors">Start building</button>
+                <button class="bg-transparent border border-border text-white px-5 py-2.5 rounded-md font-medium hover:bg-surface transition-colors">Read the docs</button>
+            </div>
+        </section>
+
+        <!-- Bento Grid Section -->
+        <section class="bento-grid w-full">
+            <div class="card md:col-span-2">
+                <h3 class="text-xl font-medium mb-3">Integrate this weekend</h3>
+                <p class="text-muted mb-6">Drop-in our SDKs and get up and running instantly.</p>
+                
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="flex gap-1.5">
+                            <div class="w-2.5 h-2.5 rounded-full bg-[#333]"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-[#333]"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-[#333]"></div>
+                        </div>
+                        <span class="text-xs text-muted ml-2 font-mono">api.ts</span>
+                    </div>
+                    <pre class="p-4 font-mono text-sm overflow-x-auto"><code class="text-gray-300"><span class="text-purple-400">import</span> { Client } <span class="text-purple-400">from</span> <span class="text-green-400">'@company/sdk'</span>;
+
+<span class="text-purple-400">const</span> client = <span class="text-purple-400">new</span> <span class="text-yellow-200">Client</span>(<span class="text-green-400">'sk_live_123'</span>);
+
+<span class="text-blue-400">await</span> client.data.<span class="text-yellow-200">sync</span>({
+  <span class="text-blue-300">target</span>: <span class="text-green-400">'production'</span>,
+  <span class="text-blue-300">mode</span>: <span class="text-green-400">'fast'</span>
+});</code></pre>
+                </div>
+            </div>
+            
+            <div class="card flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-lg bg-border flex items-center justify-center mb-6">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Modular Architecture</h3>
+                    <p class="text-muted text-sm">Everything is decoupled. Only import what you need for blazing fast performance.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
