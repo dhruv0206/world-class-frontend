@@ -1,372 +1,225 @@
 ---
 name: frontend-taste-learner
-description: Autonomously discovers world-class websites, analyzes their design and motion patterns using vision models, and updates the shared knowledge base. Run weekly to keep the frontend-generator skill sharp.
-version: 0.6.0
+description: Autonomously discovers world-class websites, analyzes their design and motion patterns using vision models, and updates the shared knowledge base. One site per run. Run on cron to build up the knowledge base over time.
+version: 0.7.1
 author: hermes-frontend-skill
 license: MIT
 metadata:
   hermes:
-    tags: [frontend, design, learning, autonomous, vision, playwright, gemini]
+    tags: [frontend, design, learning, autonomous, vision, browser]
     category: creative
   triggers:
     - "update frontend knowledge"
     - "learn new design patterns"
     - "run frontend learner"
-    - "discover new sites"
-    - "update design knowledge base"
+    - "analyze a design site"
 required_environment_variables:
   - name: GEMINI_API_KEY
     prompt: "Your Google Gemini API key (for vision analysis)"
     help: "Get one at https://aistudio.google.com"
-    required_for: vision analysis of sites
+    required_for: vision analysis
+requires_toolsets:
+  - browser
 platforms: [linux, macos, windows]
 ---
 
 # Frontend Taste Learner
 
-You are a design researcher and frontend analyst. Your job is to autonomously discover world-class websites, deeply analyze what makes them feel premium, and store that knowledge so the `frontend-generator` skill can produce output at that same level.
+You are a design researcher. Your job is to visit ONE real website per run, analyze what makes it feel premium using vision, and store those findings in the knowledge base.
 
-You are not copying code. You are doing what every great designer does — studying the best work in the world, understanding why it works, and internalizing those principles.
+You are NOT copying code. You are doing what designers do — studying great work and extracting the principles.
 
-## When to Use
+## ABSOLUTE RULES
 
-- Run on a weekly schedule to keep the knowledge base current
-- Run manually when the user says "update frontend knowledge" or "learn new design patterns"
-- Run after a new wave of standout sites appears (Awwwards SOTM, Product Hunt launches, design Twitter moments)
+1. **One site per run.** Pick the first unchecked `[ ]` item in `knowledge-base/queue.md`. Analyze it. Stop.
+2. **No hallucination.** You MUST physically navigate to the site and take screenshots before writing any analysis. If you have zero screenshots, abort entirely — write nothing.
+3. **No subagent delegation.** Do not use `delegate_task`. Do all work yourself.
+4. **No skipping steps.** If the browser fails, write a failure note in queue.md and stop. Do not write a fake analysis.
 
-## CRITICAL INSTRUCTIONS
-
-**This skill analyzes EXACTLY ONE site per run. No more, no less.**
-
-**DO NOT delegate to subagents. DO NOT hallucinate. DO NOT skip browser navigation.**
-
-**You MUST physically visit the site using the browser tool and use vision to analyze the actual page. If you have not taken a real screenshot, you cannot write the analysis file.**
-
-**All paths are relative to this skill's directory:**
+All paths are relative to this skill's directory:
 - Queue: `knowledge-base/queue.md`
-- Site analyses: `knowledge-base/site-analyses/[sitename].md`
-- Animation patterns: `knowledge-base/animation-patterns.md`
-- Design tokens: `knowledge-base/design-tokens.md`
-- Library guide: `knowledge-base/library-guide.md`
-- Generator skill: `../frontend-generator/SKILL.md`
+- Analyses: `knowledge-base/site-analyses/[sitename].md`
+- Samples: `../../samples/v[version]/`
+- Generator: `../frontend-generator/SKILL.md`
 
-## Procedure
+---
 
-### Step 1: Pick the Next Site
+## Step 1 — Pick the Site
 
-Read `knowledge-base/queue.md`. Find the first unchecked item `[ ]`. That is your target for this run.
+Read `knowledge-base/queue.md`. Find the FIRST line with `[ ]`. That is your target.
 
-If queue.md does not exist or has no unchecked items, the run is complete — do nothing else.
+If no unchecked items remain, output "Queue complete." and stop.
 
-### Step 2: Visit the Site — FULL PAGE CAPTURE
+---
 
-Navigate to the site using the browser tool at **1440px width**.
+## Step 2 — Visit and Screenshot
 
-**You must capture the ENTIRE page before writing any analysis. Do ALL of the following:**
+Navigate to the site at **1440px width**. Wait 2 seconds for animations to load.
 
-1. Navigate to the homepage. Wait 2 seconds for animations to load.
-2. Take screenshot of initial viewport (hero section)
-3. Scroll down 600px. Take screenshot.
-4. Scroll down another 600px. Take screenshot.
-5. Scroll down another 600px. Take screenshot.
-6. Scroll down another 600px. Take screenshot.
-7. Scroll to bottom of page. Take screenshot.
-8. Use browser DevTools (via execute_code or browser console) to extract:
-   - `document.documentElement.scrollHeight` — full page height
-   - All font families: `[...new Set([...document.querySelectorAll('*')].map(el => getComputedStyle(el).fontFamily))].slice(0,5)`
-   - Background color: `getComputedStyle(document.body).backgroundColor`
-   - Check for libraries: `!!window.gsap, !!window.__framer_importFromPackage, !!window.Lenis`
-9. Also visit the pricing page (if exists) and take 1 screenshot
-10. Also visit a features/product page (if exists) and take 1 screenshot
+Take screenshots in this exact sequence:
+1. Initial viewport (hero section)
+2. Scroll 600px → screenshot
+3. Scroll 600px more → screenshot
+4. Scroll 600px more → screenshot
+5. Scroll 600px more → screenshot
+6. Scroll to bottom → screenshot
 
-**Minimum 6 screenshots required. If you have fewer, keep scrolling and screenshotting.**
+That is 6 screenshots minimum. If the page is long, take more every 600px.
 
-If you cannot take real screenshots, abort. Do not write a fake analysis.
+Also run this in the browser console and record the output:
+```javascript
+({
+  pageHeight: document.documentElement.scrollHeight,
+  fonts: [...new Set([...document.querySelectorAll('*')].map(el => getComputedStyle(el).fontFamily))].slice(0,5),
+  bgColor: getComputedStyle(document.body).backgroundColor,
+  hasGSAP: !!window.gsap,
+  hasFramer: !!window.__framer_importFromPackage,
+  hasLenis: !!window.Lenis
+})
+```
 
-### Step 3: Analyze with Vision
+If you cannot get even 3 screenshots: mark the site as `[!] sitename (browser failed)` in queue.md and stop.
 
-Send ALL screenshots together to vision. Also include the DevTools data you extracted.
+---
+
+## Step 3 — Vision Analysis
+
+Send ALL screenshots + the DevTools JSON to vision with this prompt:
 
 ```
-You are a senior product designer building a design knowledge base. I am giving you 6+ screenshots of [SITE] covering the full page from top to bottom, plus raw DevTools data.
+You are a senior product designer building a design knowledge base. These are [N] screenshots of [SITE] covering the full page top-to-bottom, plus DevTools data.
 
-Analyze everything and extract EXACT values:
+Extract EXACT values:
 
 LAYOUT
 - Max-width container (px)
-- Section vertical padding (px)  
-- Grid columns and gutter width
-- White space approach (tight/balanced/generous)
-- Any unique layout patterns (bento grid, asymmetric, full-bleed, etc.)
+- Section vertical padding (px)
+- Grid columns and gutter
+- White space philosophy
 
 TYPOGRAPHY (exact values)
-- H1: font-family, size (px or vw), weight, letter-spacing, line-height
+- H1: font-family, size, weight, letter-spacing, line-height
 - H2: same
-- Body: font-family, size (px), weight, line-height, color
-- Any accent/mono/display fonts used
+- Body: font-family, size, weight, line-height, color hex
 
-COLOR SYSTEM (exact hex values)
+COLOR SYSTEM (exact hex)
 - Page background: #
 - Primary text: #
 - Secondary text: #
 - Accent/brand: #
-- Border/divider: #
+- Border color: #
 - Card background: #
-- Is it dark or light mode by default?
+- Dark or light mode default?
 
-MOTION & ANIMATION (be specific)
-- Hero animation: what happens on load?
-- Scroll animations: what elements animate, how (fade/slide/scale), duration estimate
-- Hover effects: what changes on hover?
-- Any special effects (parallax, magnetic, cursor, canvas, WebGL)?
-- Overall motion personality (subtle/expressive/cinematic)
+MOTION & ANIMATION
+- Hero load animation: what happens?
+- Scroll animations: what elements, how (fade/slide/scale), speed estimate
+- Hover effects: what changes?
+- Special effects (parallax, cursor, WebGL)?
+- Motion personality (subtle / expressive / cinematic)
 
-STACK (from DevTools data provided)
-- JS framework detected
-- Animation library detected
+STACK (from DevTools data)
+- Framework
+- Animation library
 - CSS approach
 
-WHAT MAKES IT NOT FEEL LIKE AI
-- List 3-5 specific design decisions that elevate this above generic output
+WHAT MAKES IT NOT FEEL GENERIC
+- List 3-5 specific decisions that elevate this site above AI output
 
-Give real values. If you cannot determine an exact value from screenshots, say "unclear" rather than guessing.
+Use "unclear" if you can't determine a value. Do not guess hex values — only report what you can see.
 ```
 
-### Step 4: Write the Analysis
+---
+
+## Step 4 — Write the Analysis
 
 Write to `knowledge-base/site-analyses/[sitename].md`:
 
 ```markdown
 # [Site Name] — [URL]
-Analyzed: [date]
-Screenshots taken: YES
+Analyzed: [YYYY-MM-DD]
+Screenshots taken: [N]
 
 ## Snapshot
-- Category:
+- Category: [SaaS / agency / portfolio / developer tool / etc]
 - Feel: [3 adjectives]
-- Stack:
+- Stack: [what was detected]
 
 ## Layout & Spacing
-[exact values from vision analysis]
+[exact values from vision]
 
 ## Typography
-[exact values]
+[exact values — font names, sizes, weights]
 
 ## Color System
 [exact hex values]
+- Background: #
+- Text primary: #
+- Text secondary: #
+- Accent: #
+- Border: #
+- Card bg: #
+- Mode: dark / light
 
 ## Motion & Animation
-[specific techniques, timing values]
+[specific techniques, timing values, what makes it distinctive]
 
 ## Standout Patterns
-[what makes this site special]
+[3-5 things that make this site feel premium]
 
 ## Hermes Implementation Notes
-- Animation library:
-- Key techniques:
-- Font stack:
+- Animation library: [what to use when replicating this style]
+- Key techniques: [bullet list]
+- Font stack: [font names]
 - Color tokens: bg=[hex] text=[hex] accent=[hex] border=[hex]
 ```
 
-### Step 5: Mark Done, Generate Sample, Commit
+---
 
-1. In `knowledge-base/queue.md`, change `[ ] sitename` to `[x] sitename`
-2. Append one line to `knowledge-base/animation-patterns.md` if you found a new pattern
-3. Update version patch in this SKILL.md frontmatter
+## Step 5 — Update Queue and Generate Sample
 
-4. **Run the generator to produce a sample:**
-   - Read `../frontend-generator/SKILL.md`
-   - Generate a Next.js landing page brief: "dark minimal SaaS landing page inspired by the site you just analyzed"
-   - Save the generated code to `../../samples/v[version]/index.html` as a single self-contained HTML file with inline CSS and JS (so it can be previewed without a build step)
+**5a. Mark done in queue.md**
+Change `[ ] sitename` to `[x] sitename`.
 
-5. **Screenshot the sample:**
-   - Open `../../samples/v[version]/index.html` in the browser
-   - Take a full-page screenshot
-   - Save it as `../../samples/v[version]/preview.png`
+**5b. Bump version**
+Increment the patch version in this SKILL.md frontmatter (e.g. 0.7.0 → 0.7.1).
 
-6. **Commit everything to git:**
-   ```
-   cd ../../
-   git add .
-   git commit -m "feat: v[version] — analyzed [sitename], sample preview updated"
-   git push
-   ```
+**5c. Generate sample HTML**
+Read `../frontend-generator/SKILL.md` for generation rules. Then write a self-contained single-file HTML page to `../../samples/v[new-version]/index.html`:
+- Inline CSS and JS (no build step needed)
+- Dark minimal SaaS aesthetic inspired by the site you just analyzed
+- Use the actual hex values from the analysis
+- Real copy — no Lorem ipsum, no "Get Started" as the only CTA
+- Tailwind CSS via CDN is allowed
 
-7. Done — this run is complete. The GitHub repo now has an updated sample showing current skill quality.
+**5d. Screenshot the sample**
+Open `../../samples/v[new-version]/index.html` in the browser. Take a full-page screenshot. Save it as `../../samples/v[new-version]/preview.png`.
 
-**Step 1: Visit and record**
-
-Use Playwright to:
-- Open the site in a full 1440px wide viewport
-- Scroll slowly from top to bottom (capture full page)
-- Take screenshots every 500px of scroll
-- Hover over interactive elements to capture hover states
-- Click any CTAs or nav items to capture transitions
-- Record the scroll as a video if possible
-
-**Step 2: Visual analysis via Gemini**
-
-Send the screenshots (and video if captured) to Gemini 2.5 Pro with this prompt:
-
+**5e. Commit to git**
 ```
-You are a senior product designer analyzing this website for a design knowledge base.
-
-Analyze this site and extract:
-
-LAYOUT & SPACING
-- Overall grid system (columns, gutters, max-width)
-- Section rhythm (how sections are spaced vertically)
-- White space philosophy (tight/generous/intentional)
-- Alignment patterns
-
-TYPOGRAPHY
-- Heading style (size scale, weight, tracking)
-- Body text approach (size, line height, color)
-- Font personality (geometric, humanist, serif, mono)
-- Any notable type treatments
-
-COLOR SYSTEM  
-- Primary background color(s)
-- Primary text color
-- Accent color(s) and how they're used
-- Dark/light mode approach
-- Color temperature (warm/cool/neutral)
-
-MOTION & ANIMATION
-- Does the page have scroll-triggered animations? Describe them.
-- What enters on scroll? How? (fade up, scale, blur in, etc.)
-- Is there a hero animation? Describe it.
-- Transition speed (snappy/smooth/cinematic)
-- Any cursor effects or interactive motion
-- Overall motion philosophy (subtle/expressive/functional)
-
-COMPONENTS
-- Hero section approach
-- Navigation style
-- CTA design
-- Any standout UI components or patterns
-
-OVERALL FEEL
-- 3 adjectives that describe this site's personality
-- What category of site is this? (SaaS, agency, portfolio, etc.)
-- Who does this site remind you of? (influences/peers)
-- What makes this site NOT feel like generic AI output?
-
-Be specific. Give actual values where possible (e.g. "16px base font, 1.6 line height, 800 font weight headings").
+git -C C:/Users/dhruv/AppData/Local/hermes/skills/world-class-frontend add .
+git -C C:/Users/dhruv/AppData/Local/hermes/skills/world-class-frontend commit -m "feat: v[version] — analyzed [sitename]"
+git -C C:/Users/dhruv/AppData/Local/hermes/skills/world-class-frontend push
 ```
-
-**Step 3: Extract library fingerprint**
-
-Inspect the site's JS bundles (via Playwright page.evaluate or network tab analysis) to identify:
-- Animation libraries in use (GSAP, Framer Motion, Motion One, Lenis, anime.js, etc.)
-- CSS framework (Tailwind, vanilla CSS, CSS modules, styled-components)
-- Framework (Next.js, Astro, Nuxt, SvelteKit, etc.)
-- Any notable third-party UI (Radix, shadcn, etc.)
-
-Do this by checking:
-```javascript
-// Run in page context via Playwright
-window.__framer_importFromPackage !== undefined  // Framer Motion
-window.gsap !== undefined  // GSAP
-document.querySelector('[class*="lenis"]') !== null  // Lenis scroll
-```
-
-Also check `<script>` tags and network requests for recognizable bundle names.
 
 ---
 
-### Phase 3: Store — Update the Knowledge Base
+## Done
 
-**Step 1: Write site analysis**
+This run is complete when:
+- [ ] `knowledge-base/site-analyses/[sitename].md` exists with real vision data
+- [ ] `knowledge-base/queue.md` shows `[x]` for this site
+- [ ] `../../samples/v[version]/index.html` exists
+- [ ] `../../samples/v[version]/preview.png` exists
+- [ ] Changes are committed and pushed
 
-Create `knowledge-base/site-analyses/[sitename].md` with this structure:
-
-```markdown
-# [Site Name] — [URL]
-Analyzed: [date]
-
-## Snapshot
-- Category: [SaaS / agency / portfolio / etc.]
-- Feel: [3 adjectives]
-- Stack: [Next.js + Tailwind + GSAP / etc.]
-
-## Layout & Spacing
-[findings]
-
-## Typography  
-[findings]
-
-## Color System
-[findings]
-
-## Motion & Animation
-[findings — be very specific about techniques]
-
-## Standout Patterns
-[anything unique or worth replicating]
-
-## Hermes Implementation Notes
-- Animation library to use: [GSAP / Framer Motion / CSS / etc.]
-- Key techniques: [list specific animation patterns]
-- Font stack: [Google Fonts equivalents]
-- Color tokens: [actual hex values]
-```
-
-**Step 2: Update pattern library**
-
-Read `knowledge-base/animation-patterns.md`. If you discovered any new or better techniques this run, add them. If a technique appeared on 3+ sites, mark it as a `[PROVEN]` pattern.
-
-**Step 3: Update design tokens**
-
-Read `knowledge-base/design-tokens.md`. Update with any new spacing systems, type scales, or color approaches you found.
-
-**Step 4: Update library guide**
-
-Read `knowledge-base/library-guide.md`. If you found new evidence for when to use which library (e.g. "5 of the most cinematic sites use GSAP ScrollTrigger, not Framer Motion"), update the recommendations.
-
----
-
-### Phase 4: Self-Improve — Update the Generator Skill
-
-Read `../frontend-generator/SKILL.md`. Based on what you learned this run:
-
-1. If you found a better default animation library recommendation, update it
-2. If you found a new pattern that should be in the generator's defaults, add it
-3. If you found that a technique you previously recommended produces inferior output, remove or demote it
-4. Update the generator's "what makes it NOT feel like AI slop" section with new specific rules
-
-Write a brief changelog entry describing what changed and why.
-
----
-
-### Phase 5: Publish — Version and Commit
-
-1. Increment the version in this SKILL.md (patch if minor additions, minor if significant new patterns)
-2. Update `CHANGELOG.md` with:
-   - Version number and date
-   - Sites analyzed this run
-   - Key patterns discovered
-   - Changes made to generator skill
-3. Save 1-2 representative screenshots from generated samples into `samples/v[version]/`
-4. Commit everything with message: `feat: v[version] — learned [n] new sites, [key insight]`
+If any item is missing, complete it before stopping.
 
 ---
 
 ## Pitfalls
 
-- **Max Iterations / Context Limits**: Looping 5+ sites with full browser+vision analysis in one run often hits `max_iterations` or context length limits. Break the work up, or use the `scripts/batch_update_kb.py` template via `execute_code` to generate the markdown files efficiently in one shot.
-- **Site blocks Browser (e.g., Vercel Security Checkpoint, Cloudflare)**: High-end SaaS sites often have aggressive bot protection. If `browser_navigate` hits a security checkpoint or returns an empty page, do not waste time trying to bypass it. Immediately skip and select another site on your list.
-- **Gemini vision hits rate limits**: Process 3 sites at a time with a delay between batches.
-- **Knowledge base gets contradictory**: If two sites recommend opposite approaches, don't pick one — document both with context for when each applies.
-- **Temptation to scrape code**: Don't. Visual analysis is better and cleaner. The goal is understanding patterns, not copying implementation.
-
-## Verification
-
-**This run is NOT complete until ALL of the following are true:**
-- At least 5 new files exist in `knowledge-base/site-analyses/`
-- `knowledge-base/animation-patterns.md` has been updated with new findings
-- `knowledge-base/design-tokens.md` has been updated
-- CHANGELOG.md has a new entry
-- Version number incremented
-
-If any of these are missing, continue analyzing more sites before stopping.
+- **Bot protection / security checkpoint**: If the site blocks the browser, mark as `[!] sitename (blocked)` and stop.
+- **Browser timeout on Windows**: Windows browser is early beta. If it fails twice, mark as `[!]` and stop. Do not retry more than twice.
+- **Temptation to write from memory**: If you realize you are writing analysis values from your training data instead of from screenshots, stop and abort. Mark the site as `[!] sitename (aborted — no real screenshots)`.
+- **Git path**: Always use the full absolute path `C:/Users/dhruv/AppData/Local/hermes/skills/world-class-frontend` for git commands.
