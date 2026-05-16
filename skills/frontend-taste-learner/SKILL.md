@@ -124,12 +124,31 @@ Screenshots taken: YES
 - Color tokens: bg=[hex] text=[hex] accent=[hex] border=[hex]
 ```
 
-### Step 5: Mark Done and Update
+### Step 5: Mark Done, Generate Sample, Commit
 
 1. In `knowledge-base/queue.md`, change `[ ] sitename` to `[x] sitename`
 2. Append one line to `knowledge-base/animation-patterns.md` if you found a new pattern
 3. Update version patch in this SKILL.md frontmatter
-4. Done — this run is complete
+
+4. **Run the generator to produce a sample:**
+   - Read `../frontend-generator/SKILL.md`
+   - Generate a Next.js landing page brief: "dark minimal SaaS landing page inspired by the site you just analyzed"
+   - Save the generated code to `../../samples/v[version]/index.html` as a single self-contained HTML file with inline CSS and JS (so it can be previewed without a build step)
+
+5. **Screenshot the sample:**
+   - Open `../../samples/v[version]/index.html` in the browser
+   - Take a full-page screenshot
+   - Save it as `../../samples/v[version]/preview.png`
+
+6. **Commit everything to git:**
+   ```
+   cd ../../
+   git add .
+   git commit -m "feat: v[version] — analyzed [sitename], sample preview updated"
+   git push
+   ```
+
+7. Done — this run is complete. The GitHub repo now has an updated sample showing current skill quality.
 
 **Step 1: Visit and record**
 
