@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.0] - 2026-05-16
+### Added
+- Analyzed: Anthropic.com
+- Key insight: The "Editorial/Academic" counter-movement to Dark SaaS. By using high-contrast Serif headlines paired with clean Sans-serif body text on cream/off-white backgrounds, the site projects extreme trust, maturity, and academic rigor.
+- Updated pattern library with the "Ambient Organic Motion" pattern (slow-moving, warm-colored abstract shapes) to soften highly technical products.
+
 ## [0.3.0] - 2026-05-16
 ### Added
 - Analyzed: Linear.app
