@@ -1,7 +1,7 @@
 ---
 name: frontend-taste-learner
 description: Autonomously discovers world-class websites, analyzes their design and motion patterns using vision models, and updates the shared knowledge base. Run weekly to keep the frontend-generator skill sharp.
-version: 0.2.0
+version: 0.3.0
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -49,42 +49,45 @@ You are not copying code. You are doing what every great designer does — study
 
 ## Procedure
 
-### Phase 1: Discovery — Find New World-Class Sites
+### Phase 1: Discovery — Build Your Site Queue
 
-Search for sites you haven't analyzed yet. Cast a wide net:
+Search for world-class sites. Cross-reference with `../../knowledge-base/site-analyses/` to skip already-analyzed ones.
 
-1. Search the web for:
-   - "Awwwards site of the month 2026"
-   - "best designed SaaS websites 2026"
-   - "minimal startup websites that look premium"
-   - "best landing pages 2026 design"
-   - "website design inspiration developers"
-   - Recent Product Hunt #1 launches with standout design
-   - "Linear-style minimal dark websites"
-   - "best motion design websites 2026"
+Search queries to use:
+- "best designed SaaS websites 2026"
+- "Awwwards site of the month 2026"
+- "minimal startup websites premium design"
+- "best landing pages 2026"
+- "Linear Stripe Vercel design inspiration"
 
-2. Check these sources every run:
-   - awwwards.com/websites (winners and honorable mentions)
-   - httpster.net
-   - land-book.com
-   - lapa.ninja
-   - bestwebsite.gallery
-   - godly.website
+**BEFORE doing any analysis, write a file called `../../knowledge-base/queue.md` with your full list of 8-10 sites to analyze this run, like this:**
 
-3. Cross-reference with `../../knowledge-base/site-analyses/` — skip sites already analyzed.
+```
+# Analysis Queue
+- [ ] linear.app
+- [ ] stripe.com
+- [ ] vercel.com
+- [ ] resend.com
+- [ ] raycast.com
+- [ ] craft.do
+- [ ] loom.com
+- [ ] arc.net
+```
 
-4. Build a list of 8–15 new sites to analyze this run. Prioritize:
-   - Sites referenced multiple times across sources
-   - Sites that appear visually distinct from what's already in the knowledge base
-   - Sites with strong motion/animation reputation
-
-5. **Store this full list before starting analysis. You will loop through every site on the list.**
+Only after writing queue.md, move to Phase 2.
 
 ---
 
-### Phase 2: Analysis — Watch, Inspect, Understand (LOOP THROUGH ALL SITES)
+### Phase 2: Analysis — Work Through the Queue
 
-**For EACH site in your list, repeat all steps below. Do not stop until every site is analyzed.**
+Read `../../knowledge-base/queue.md`. For each unchecked site `[ ]`:
+
+1. Analyze the site (steps below)
+2. Write the site analysis file
+3. Mark it as done `[x]` in queue.md
+4. Move to the next unchecked site immediately — no stopping, no asking
+
+**Repeat until every item in queue.md is checked `[x]`. Only then move to Phase 3.**
 
 **Step 1: Visit and record**
 
@@ -246,7 +249,7 @@ Write a brief changelog entry describing what changed and why.
 
 ## Pitfalls
 
-- **Site blocks Playwright**: Try adding realistic user-agent header and viewport. If still blocked, skip and note it.
+- **Site blocks Browser (e.g., Vercel Security Checkpoint, Cloudflare)**: High-end SaaS sites often have aggressive bot protection. If `browser_navigate` hits a security checkpoint or returns an empty page, do not waste time trying to bypass it. Immediately skip and select another site on your list.
 - **Gemini vision hits rate limits**: Process 3 sites at a time with a delay between batches.
 - **Knowledge base gets contradictory**: If two sites recommend opposite approaches, don't pick one — document both with context for when each applies.
 - **Temptation to scrape code**: Don't. Visual analysis is better and cleaner. The goal is understanding patterns, not copying implementation.
