@@ -52,21 +52,15 @@ If no unchecked items remain, output "Queue complete." and stop.
 
 ---
 
-## Step 2 — Visit and Screenshot
+## Step 2 — Visit and Screenshot (Multi-Page)
 
-Navigate to the site at **1440px width**. Wait 2 seconds for animations to load.
+1. **Homepage:** Navigate to the site URL at 1440px width. Wait 2 seconds.
+   Take screenshots scrolling every 600px until the bottom (minimum 4 screenshots).
+2. **Sub-page Exploration:** Look for a "Pricing", "Features", or "About" link. Navigate to one of those sub-pages (e.g. `url + '/pricing'`).
+   Take 2-3 screenshots of the sub-page. 
+   *(This helps us learn multi-page consistency and sub-page layouts).*
 
-Take screenshots in this exact sequence (To stitch them vertically for cohesive vision analysis, use `python scripts/stitch_screenshots.py <output.png> <img1.png> <img2.png> ...`):
-1. Initial viewport (hero section)
-2. Scroll 600px → screenshot
-3. Scroll 600px more → screenshot
-4. Scroll 600px more → screenshot
-5. Scroll 600px more → screenshot
-6. Scroll to bottom → screenshot
-
-That is 6 screenshots minimum. If the page is long, take more every 600px.
-
-Also run this in the browser console and record the output (Note: must be single-line to avoid `SyntaxError` in browser_console):
+Run this in the browser console on the homepage and record the output:
 ```javascript
 JSON.stringify({pageHeight: document.documentElement.scrollHeight, fonts: [...new Set([...document.querySelectorAll('*')].map(el => getComputedStyle(el).fontFamily))].slice(0,5), bgColor: getComputedStyle(document.body).backgroundColor, hasGSAP: !!window.gsap, hasFramer: !!window.__framer_importFromPackage, hasLenis: !!window.Lenis})
 ```
@@ -118,6 +112,11 @@ STACK (from DevTools data)
 - Framework
 - Animation library
 - CSS approach
+
+MULTI-PAGE ARCHITECTURE
+- How does the layout change on sub-pages (e.g. Pricing/Features)?
+- Is the navigation bar sticky, blurred, or different on sub-pages?
+- How is structural consistency maintained?
 
 WHAT MAKES IT NOT FEEL GENERIC
 - List 3-5 specific decisions that elevate this site above AI output
@@ -282,12 +281,17 @@ If any item is missing, complete it before stopping.
 ## Pitfalls
 
 - **Browser Console Syntax Errors**: Multiline object literals in `browser_console` throw `Unexpected end of input`. Use single-line `JSON.stringify({...})` (already updated in Step 2).
+- **Windows MSYS Pathing**: When invoking background bash scripts (e.g., `batch_runner.sh`) from a different drive (like `D:`), never use relative paths (`../../../`). Always use absolute MSYS paths (`/c/Users/<user>/AppData/Local/hermes/...`).
+- **Queue Location**: If you manually seed `queue.md`, ensure you write it to the *skill's* absolute knowledge-base directory (`C:/Users/<user>/AppData/Local/hermes/skills/world-class-frontend/skills/frontend-taste-learner/knowledge-base/queue.md`). Writing it only to a local project's research folder will cause the batch runner to read an empty global queue and exit immediately.
 - **Scroll Warning Loop**: When scrolling using `window.scrollBy` in `browser_console` multiple times, return a random number (e.g., `'scrolled ' + Math.random()`) to prevent the idempotent loop detector from blocking it.
 - **Python Execute Code Env**: `execute_code` runs in an isolated venv. If a script requires a host package like `Pillow`, save it to a file and run it via `terminal` using the host Python environment.
 - **Python module errors**: `execute_code` may fail to find pip-installed modules like PIL if it runs in a separate sandbox. If so, write the stitch script to disk and execute it via `terminal` using the explicit python binary.
-- **Batch Processing**: If asked to run this repeatedly for a given duration, do not try to run a Python script with `execute_code`. Instead, run the included `scripts/batch_runner.sh` via the terminal in the background. It uses `hermes chat "run frontend-taste-learner" --skills frontend-taste-learner --yolo` to correctly trigger autonomous CLI agent loops.
+- **Batch Processing & Paths**: If asked to run this repeatedly, run the included `scripts/batch_runner.sh` via the terminal in the background. **Crucial pathing rules:** 
+  1. Always invoke the script using its absolute MSYS path (e.g., `/c/Users/dhruv/AppData/Local/hermes/skills/world-class-frontend/skills/frontend-taste-learner/scripts/batch_runner.sh`), never relative paths (like `../../../`) across drives.
+  2. If seeding the `queue.md` from an external script or chat, ensure you write to the actual skill's queue file (`knowledge-base/queue.md` inside the skill dir), NOT a local project copy. If the local queue is empty, the batch runner will immediately exit.
 - **Bot protection / security checkpoint**: If the site blocks the browser (e.g. Cloudflare on Stripe/Anthropic), mark as `[!] sitename (blocked)` and stop.
 - **Browser timeout on Windows**: Windows browser is early beta. If it fails twice, mark as `[!]` and stop. Do not retry more than twice.
+- **Background batching on Windows**: When running Hermes CLI in a headless background loop via Python `subprocess` on Windows, `prompt_toolkit` will crash (`NoConsoleScreenBufferError`) even with `TERM=dumb`. To run the learner loop fully headlessly on Windows, you must mock `sys.stdout`/`stdin` inside the python script *before* importing the hermes CLI.
 - **Queue file location (Silent Failure Loop)**: The `queue.md` file MUST be modified inside the skill's specific directory. If you or the user create a `queue.md` in a local project workspace, you must sync/copy it to the skill's internal directory (`C:/Users/<user>/AppData/Local/hermes/skills/world-class-frontend/skills/frontend-taste-learner/knowledge-base/queue.md`), otherwise the background `batch_runner.sh` will spin infinitely polling an empty internal queue while ignoring the populated project queue.
 - **Temptation to write from memory**: If you realize you are writing analysis values from your training data instead of from screenshots, stop and abort. Mark the site as `[!] sitename (aborted — no real screenshots)`.
 - **Git path**: Always use the full absolute path `C:/Users/dhruv/AppData/Local/hermes/skills/world-class-frontend` for git commands.

@@ -47,12 +47,13 @@ Whenever the user asks you to evaluate, score, or critique a webpage, screenshot
 - Subtle, high-quality shadows or glows (not harsh box-shadows).
 - Beautiful empty states or mockups.
 
-### 5. The "AI Slop" Penalty (Up to -40 points)
+### 5. The "AI Slop" Penalty (Up to -50 points)
 Deduct points ruthlessly for:
 - "Get Started" as the only CTA text (-5)
 - Generic 3-column feature grids with FontAwesome-style icons (-10)
-- The exact color `#4F46E5` (Indigo-600) used as a primary gradient without modification (-5)
-- Completely centered layouts for everything (-10)
+- The exact color `#4F46E5` (Indigo-600) or ANY generic purple/blue used as a primary gradient. If it looks like default Tailwind indigo/purple, deduct points! (-10)
+- Completely centered layouts for everything. A real page mixes left-aligned bento grids with centered hero text (-10)
+- Too short! If a page is just a Hero and a Feature grid, it feels like a fake template. It needs social proof, deep feature explanations, or FAQs to feel like a real product (-15)
 - Lorem Ipsum instead of actual copy (-10)
 
 ## Procedure

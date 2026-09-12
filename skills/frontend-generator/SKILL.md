@@ -139,12 +139,17 @@ tailwind.config.ts   ← custom design tokens
 - Gradients: use very sparingly. If used, keep subtle (opacity 0.3–0.5 max)
 
 **What to avoid**
-- Purple/blue gradient hero backgrounds (generic AI tell)
+- Purple/blue gradient hero backgrounds (generic AI tell). Use monochrome (white/black/gray) or extremely desaturated earth tones/pastels. If you use a color accent, make it unexpected (e.g. #F55036 orange-red, #1D2939 deep slate).
 - "Get Started" as the only CTA copy — write real copy
 - Emoji in headings
-- Three-column feature grids with generic icons as the only content section
+- Three-column feature grids with generic icons as the only content section. Use bento grids or asymmetrical layouts.
+- Centering everything. Left-align text blocks and grids for a more editorial feel.
+- Short pages! A real landing page has a Hero, Social Proof (logos), a deep Feature breakdown, a Bento Grid, and a strong Footer. Do not just output a Hero section unless explicitly asked for one.
 - Box shadows on everything
 - Hover animations that change layout (width, height changes)
+
+## References
+- Read `references/tailwind-v4-turbopack-gotchas.md` if encountering Tailwind CSS compilation errors, Turbopack caching issues, or if building high-performance CSS-masked components without React state overhead.
 
 **MANDATORY PAGE STRUCTURE — landing pages must have all of these sections**
 
@@ -168,13 +173,16 @@ Single-file HTML samples must still hit all 8 sections. Use inline SVG for logos
 
 ### Step 5: Write the Code
 
-Generate complete, working code. Not pseudocode. Not "add your content here" placeholders.
+Generate complete, working **Next.js (React) code**. Do NOT generate plain HTML/CSS files.
+
+**CRITICAL RULE:** NEVER save generated files or demos to the user's Desktop. Always save them inside the active project directory (e.g., `D:\Projects\aether-ui`) or a dedicated `samples/` folder. 
 
 Every component should:
+- Be a `.tsx` file using Tailwind CSS.
+- Use **Framer Motion** (`<motion.div>`) for all animations. Do not use CSS transitions for layout or entrance animations.
+- Use spring physics for entrances: `transition={{ type: "spring", stiffness: 100, damping: 20 }}`.
 - Have real placeholder content that fits the style (write actual copy, not "Lorem ipsum")
 - Be fully typed with TypeScript
-- Use the animation library correctly (not just className animations)
-- Work on mobile (responsive from the start)
 
 Start with the files in this order:
 1. `tailwind.config.ts` — custom tokens first
@@ -183,6 +191,8 @@ Start with the files in this order:
 4. `lib/animations.ts` — reusable variants
 5. Components (hero first, then sections)
 6. `app/page.tsx` — assembles everything
+
+**File saving**: Always write generated demo or test files directly into the project directory (e.g. `samples/` or `D:\Projects\...`). Never save files to the user's Desktop.
 
 ---
 
