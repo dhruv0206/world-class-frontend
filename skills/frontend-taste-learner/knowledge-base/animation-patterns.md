@@ -7,3 +7,7 @@
 - Pattern: Asymmetric bento grids with thick paddings
 - Trigger: layout
 - Replicate with: Tailwind `grid-cols-2 md:grid-cols-3` and `row-span-2` on leading items, minimum 40px internal padding.
+## From activetheory.net (v0.7.6)
+- Pattern: 3D Spatial Navigation with Refractive Glass
+- Trigger: load/scroll
+- Replicate with: Absolute positioned Three.js background, and foreground UI panels using `backdrop-filter: blur(20px)` and subtle rotation (`transform: perspective(1000px) rotateY(-5deg)`).
