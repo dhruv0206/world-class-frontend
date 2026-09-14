@@ -161,3 +161,8 @@ transition: all 0.3s ease;
 [PROVEN] Glowing neon borders on dark cards (Supabase)
 [PROVEN] Interactive playground widgets in hero (Clerk)
 [PROVEN] Scroll-linked narrative with glowing lines (GitHub)
+
+## From vercel.com (v0.7.3)
+- Pattern: Subtle pure-CSS opacity shifts on table rows for hover state instead of background color changes.
+- Trigger: hover
+- Replicate with: CSS `opacity: 0.8` transitions.
