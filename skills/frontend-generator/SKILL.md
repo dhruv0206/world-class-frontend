@@ -1,7 +1,7 @@
 ---
 name: frontend-generator
 description: Generates production-grade Next.js frontends that feel like they were built by a world-class design team. Reads from an accumulated knowledge base of elite site analyses. Output should not feel like AI slop.
-version: 0.1.1
+version: 0.1.2
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -153,7 +153,11 @@ tailwind.config.ts   ← custom design tokens
 
 **MANDATORY PAGE STRUCTURE — landing pages must have all of these sections**
 
-### Learned from vercel.com
+### Learned from family.co
+- Bento grids MUST use asymmetric row spans (e.g., `row-span-2` on the first item, standard on others) and minimum 40px internal padding to create dynamic tension.
+- Status pills/badges MUST use concentric ring shadows or glowing inner borders (`box-shadow: inset ...`) rather than flat solid borders.
+- H1s MUST use minimum font-weight 700 with letter-spacing of at least -0.04em, contrasted with secondary text at font-weight 400.
+
 1. **Pricing table micro-interactions**: Table row hover states must use CSS opacity shifts (`opacity: 0.8`) or extremely subtle background shifts (`#111111`) rather than heavy background color changes.
 2. **Typographic alignment**: Tabular data (like pricing) must have perfect alignment and wide gutters, using secondary text colors (`#888888`) for non-primary information.
 3. **Absence of heavy animation**: Use native CSS transitions (`transition-colors`) instead of Framer Motion for tabular/grid micro-interactions to maintain a lightweight, performance-focused feel.
