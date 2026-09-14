@@ -9,7 +9,7 @@
 - [!] inpieces.com (browser failed) — In Pieces (Awwwards winner, interactive)
 - [!] weberbbqcultures.com (browser failed) — Weber BBQ Cultures (Awwwards winner)
 - [x] activetheory.net — Active Theory (Elite web design portfolio)
-- [ ] miumiu.com/house — MIU MIU A House that we shaped (SOTD)
+- [!] miumiu.com/house (browser failed) — MIU MIU A House that we shaped (SOTD)
 ## Tier — Discovered [2026-09-14] from [Httpster]
 - [ ] mobbin.com — High quality minimal aesthetic and design patterns
 - [ ] amie.so — Joyful interactions and premium feel
