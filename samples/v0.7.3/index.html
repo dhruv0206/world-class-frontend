@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample - Vercel Inspired</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .border-subtle { border-color: #333333; }
+        .text-secondary { color: #888888; }
+        
+        .row-hover:hover {
+            background-color: #111111;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col items-center pt-24">
+    <div class="max-w-5xl w-full px-6">
+        <h1 class="text-4xl md:text-5xl font-medium tracking-tight mb-4">Pricing that scales with you</h1>
+        <p class="text-secondary text-lg mb-16 max-w-2xl">Deploy your next project in seconds. No credit card required for Hobby.</p>
+        
+        <div class="border border-subtle rounded-xl overflow-hidden">
+            <div class="grid grid-cols-4 border-b border-subtle p-6 bg-[#0a0a0a]">
+                <div class="font-medium text-secondary">Features</div>
+                <div class="font-medium">Hobby</div>
+                <div class="font-medium">Pro</div>
+                <div class="font-medium">Enterprise</div>
+            </div>
+            
+            <div class="grid grid-cols-4 border-b border-subtle p-6 row-hover transition-colors">
+                <div class="text-secondary">Automatic Routing</div>
+                <div>✓</div>
+                <div>✓</div>
+                <div>✓</div>
+            </div>
+            <div class="grid grid-cols-4 border-b border-subtle p-6 row-hover transition-colors">
+                <div class="text-secondary">HTTPS Certificates</div>
+                <div>✓</div>
+                <div>✓</div>
+                <div>✓</div>
+            </div>
+            <div class="grid grid-cols-4 p-6 row-hover transition-colors">
+                <div class="text-secondary">Traffic Load Balancing</div>
+                <div>✓</div>
+                <div>✓</div>
+                <div>✓</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
