@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Theory Aesthetic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+        body {
+            background-color: #000;
+            color: #E6E6E6;
+            font-family: 'Space Mono', monospace;
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #000 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: transform 0.5s ease;
+        }
+        .glass-panel:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+        }
+        .accent {
+            color: #9F82F9;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+        .nav-link:hover {
+            color: #9F82F9;
+        }
+    </style>
+</head>
+<body>
+    <div class="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-4">
+        <div class="text-[10px] text-gray-500 mb-2 uppercase tracking-widest">What are you looking for?</div>
+        <a href="#" class="nav-link flex items-center gap-2"><span class="accent">-></span> Websites</a>
+        <a href="#" class="nav-link flex items-center gap-2"><span class="accent">-></span> Installations</a>
+        <a href="#" class="nav-link flex items-center gap-2"><span class="accent">-></span> XR / VR / AI</a>
+    </div>
+
+    <div class="glass-panel">
+        <h1 class="text-4xl font-bold mb-4 tracking-tight">THE FRONTIER<br>WITHIN</h1>
+        <p class="text-sm text-gray-400 mb-8 leading-relaxed">Immersive digital experiences blending bleeding-edge web technology with cinematic art direction.</p>
+        <button class="border border-[#4A4A4A] px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-[#9F82F9] hover:text-black transition-colors duration-300">Explore Work</button>
+    </div>
+</body>
+</html>
