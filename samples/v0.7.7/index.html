@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether UI - AI Native Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://rsms.me/inter/inter.css');
+        html { font-family: 'Inter', sans-serif; }
+        body { background-color: #111111; color: #FFFFFF; }
+        
+        .pill-nav {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid #333333;
+        }
+
+        .hero-title {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+        
+        .grid-card {
+            background-color: #1A1A1A;
+            border: 1px solid #333333;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        
+        .grid-card:hover {
+            transform: translateY(-4px);
+            border-color: #666666;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-white selection:text-black">
+
+    <!-- Sticky Pill Navigation -->
+    <div class="fixed top-6 left-0 right-0 flex justify-center z-50">
+        <nav class="pill-nav rounded-full px-6 py-3 flex items-center gap-8 shadow-2xl">
+            <a href="#" class="text-white font-semibold tracking-tight">Aether UI</a>
+            <div class="flex items-center gap-6 text-sm text-[#999999]">
+                <a href="#" class="hover:text-white transition-colors">Components</a>
+                <a href="#" class="hover:text-white transition-colors">Pricing</a>
+                <a href="#" class="hover:text-white transition-colors">LLM Docs</a>
+            </div>
+            <button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                Get Access
+            </button>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="max-w-[1200px] mx-auto px-6 pt-[160px] pb-[120px]">
+        <div class="text-center max-w-3xl mx-auto mb-24 relative z-10">
+            <h1 class="text-6xl md:text-[80px] font-bold hero-title mb-6">
+                Build interfaces <br/>
+                <span class="text-[#999999]">agents can read.</span>
+            </h1>
+            <p class="text-lg text-[#999999] mb-10 max-w-xl mx-auto">
+                A premium hardware-accelerated component library engineered specifically for AI-native workflows and code generation.
+            </p>
+            <button class="bg-white text-black px-8 py-4 rounded-full font-medium hover:scale-105 transition-transform">
+                Start Building for Free
+            </button>
+        </div>
+
+        <!-- 3-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            <div class="grid-card rounded-[24px] p-8">
+                <h3 class="text-2xl font-semibold mb-3 tracking-tight">Zero-Config Physics</h3>
+                <p class="text-[#999999] leading-relaxed">
+                    Pure CSS hardware-accelerated animations replace React-heavy Framer motion setups for instant rendering.
+                </p>
+            </div>
+            <div class="grid-card rounded-[24px] p-8">
+                <h3 class="text-2xl font-semibold mb-3 tracking-tight">Agent-Readable</h3>
+                <p class="text-[#999999] leading-relaxed">
+                    Ships with highly optimized prompt.md and llms.txt definitions out of the box for perfect AI code generation.
+                </p>
+            </div>
+            <div class="grid-card rounded-[24px] p-8">
+                <h3 class="text-2xl font-semibold mb-3 tracking-tight">Radix Architecture</h3>
+                <p class="text-[#999999] leading-relaxed">
+                    Built on shadcn/ui primitives utilizing data-slot and asChild patterns for complete accessibility and composition.
+                </p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

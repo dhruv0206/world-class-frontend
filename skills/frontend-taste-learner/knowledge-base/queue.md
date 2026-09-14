@@ -11,7 +11,7 @@
 - [x] activetheory.net — Active Theory (Elite web design portfolio)
 - [!] miumiu.com/house (browser failed) — MIU MIU A House that we shaped (SOTD)
 ## Tier — Discovered [2026-09-14] from [Httpster]
-- [ ] mobbin.com — High quality minimal aesthetic and design patterns
+- [x] mobbin.com — High quality minimal aesthetic and design patterns
 - [ ] amie.so — Joyful interactions and premium feel
 - [ ] resend.com — Developer tool perfection with brutalist-minimal fusion
 - [ ] cron.com — Next-level calendar interactions and typography
