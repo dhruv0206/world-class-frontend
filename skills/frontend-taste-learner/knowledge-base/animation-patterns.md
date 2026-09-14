@@ -11,3 +11,8 @@
 - Pattern: 3D Spatial Navigation with Refractive Glass
 - Trigger: load/scroll
 - Replicate with: Absolute positioned Three.js background, and foreground UI panels using `backdrop-filter: blur(20px)` and subtle rotation (`transform: perspective(1000px) rotateY(-5deg)`).
+
+## From mobbin.com (v0.7.7)
+- Pattern: Scattered, floating app icons around central text causing depth/parallax.
+- Trigger: Scroll / load
+- Replicate with: Framer Motion `y` transforms and absolute positioning with staggered delays.

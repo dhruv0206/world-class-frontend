@@ -1,7 +1,7 @@
 ---
 name: frontend-generator
 description: Generates production-grade Next.js frontends that feel like they were built by a world-class design team. Reads from an accumulated knowledge base of elite site analyses. Output should not feel like AI slop.
-version: 0.1.2
+version: 0.1.4
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -161,6 +161,12 @@ tailwind.config.ts   ← custom design tokens
 1. **Pricing table micro-interactions**: Table row hover states must use CSS opacity shifts (`opacity: 0.8`) or extremely subtle background shifts (`#111111`) rather than heavy background color changes.
 2. **Typographic alignment**: Tabular data (like pricing) must have perfect alignment and wide gutters, using secondary text colors (`#888888`) for non-primary information.
 3. **Absence of heavy animation**: Use native CSS transitions (`transition-colors`) instead of Framer Motion for tabular/grid micro-interactions to maintain a lightweight, performance-focused feel.
+
+### Learned from mobbin.com
+1. Every hero section MUST include secondary floating graphical elements (like scattered app icons, abstract shapes, or decorative nodes) to fill empty voids around central text and create depth.
+2. A large, realistic product interface mockup or structural showcase MUST immediately follow the hero section before any feature grids.
+3. When representing pricing or plans, use dense, multi-column tables with explicit checkmarks and subtle border dividers (`border-gray-800`), rather than basic feature cards.
+
 
 A "world-class landing page" is NOT a hero + footer. It is at minimum 6 distinct sections, each with real content and visual treatment. If the output is just nav + hero + footer with empty void below, IT IS A FAILED SAMPLE.
 
