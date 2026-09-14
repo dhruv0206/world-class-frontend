@@ -1,7 +1,7 @@
 ---
 name: frontend-generator
 description: Generates production-grade Next.js frontends that feel like they were built by a world-class design team. Reads from an accumulated knowledge base of elite site analyses. Output should not feel like AI slop.
-version: 0.1.0
+version: 0.1.1
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -152,6 +152,11 @@ tailwind.config.ts   ← custom design tokens
 - Read `references/tailwind-v4-turbopack-gotchas.md` if encountering Tailwind CSS compilation errors, Turbopack caching issues, or if building high-performance CSS-masked components without React state overhead.
 
 **MANDATORY PAGE STRUCTURE — landing pages must have all of these sections**
+
+### Learned from vercel.com
+1. **Pricing table micro-interactions**: Table row hover states must use CSS opacity shifts (`opacity: 0.8`) or extremely subtle background shifts (`#111111`) rather than heavy background color changes.
+2. **Typographic alignment**: Tabular data (like pricing) must have perfect alignment and wide gutters, using secondary text colors (`#888888`) for non-primary information.
+3. **Absence of heavy animation**: Use native CSS transitions (`transition-colors`) instead of Framer Motion for tabular/grid micro-interactions to maintain a lightweight, performance-focused feel.
 
 A "world-class landing page" is NOT a hero + footer. It is at minimum 6 distinct sections, each with real content and visual treatment. If the output is just nav + hero + footer with empty void below, IT IS A FAILED SAMPLE.
 
