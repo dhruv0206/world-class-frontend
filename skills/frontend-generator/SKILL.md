@@ -1,7 +1,7 @@
 ---
 name: frontend-generator
 description: Generates production-grade Next.js frontends that feel like they were built by a world-class design team. Reads from an accumulated knowledge base of elite site analyses. Output should not feel like AI slop.
-version: 0.1.5
+version: 0.1.6
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -152,6 +152,11 @@ tailwind.config.ts   ← custom design tokens
 - Read `references/tailwind-v4-turbopack-gotchas.md` if encountering Tailwind CSS compilation errors, Turbopack caching issues, or if building high-performance CSS-masked components without React state overhead.
 
 **MANDATORY PAGE STRUCTURE — landing pages must have all of these sections**
+
+### Learned from resend.com
+- Implement multi-layered volumetric lighting in backgrounds using multiple faint radial gradients rather than a flat black or single glow.
+- Apply a high-contrast typography scale, explicitly pairing a tight-tracked bold serif for H1 with a clean monospace/sans-serif for technical details.
+- Enforce ultra-thin 1px borders (`border-white/10`) on all cards with subtle inner box-shadows to simulate depth without breaking the dark mode feel.
 
 ### Learned from family.co
 - Bento grids MUST use asymmetric row spans (e.g., `row-span-2` on the first item, standard on others) and minimum 40px internal padding to create dynamic tension.

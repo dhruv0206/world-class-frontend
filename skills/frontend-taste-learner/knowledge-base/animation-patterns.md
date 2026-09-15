@@ -20,3 +20,8 @@
 - Pattern: Subtle hand-drawn SVG arrows pointing to UI elements
 - Trigger: scroll / load
 - Replicate with: Absolute positioned SVG elements overlapping relative containers
+
+## From resend.com (v0.7.9)
+- Pattern: Subtle volumetric background lighting with rotating 3D center
+- Trigger: load / continuous
+- Replicate with: Multi-layered CSS radial gradients + Three.js for center cube
