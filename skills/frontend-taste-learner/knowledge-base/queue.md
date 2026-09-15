@@ -14,5 +14,5 @@
 - [x] mobbin.com — High quality minimal aesthetic and design patterns
 - [x] amie.so — Joyful interactions and premium feel
 - [!] resend.com (browser failed) - Developer tool perfection with brutalist-minimal fusion
-- [ ] cron.com — Next-level calendar interactions and typography
-- [ ] basecamp.com — Distinctive layout and typography
+- [!] cron.com (browser failed) — Next-level calendar interactions and typography
+- [x] basecamp.com — Distinctive layout and typography
