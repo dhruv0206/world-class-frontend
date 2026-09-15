@@ -1,1 +1,146 @@
-<html><head><script src="https://cdn.tailwindcss.com"></script><style>body { background-color: #030014; color: #FFFFFF; font-family: Inter, sans-serif; } .glow { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }</style></head><body class="flex items-center justify-center min-h-screen"><div class="max-w-2xl text-center"><h1 class="text-6xl font-bold tracking-tight mb-6">Think better with AI.</h1><p class="text-xl text-[#A1A1AA] mb-10">Reflect uses GPT-4 and Whisper to improve your writing, organize your thoughts, and act as your intellectual thought partner.</p><button class="glow bg-[#8B5CF6] text-white px-8 py-4 rounded-full font-semibold">Start free trial</button></div></body></html>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Email API — Premium Aesthetic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: '#000000',
+            primary: '#ffffff',
+            secondary: '#a1a1aa',
+            accent: '#ffffff',
+            border: '#27272a',
+            card: '#09090b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .glow-bg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .card-border {
+      border: 1px solid #27272a;
+      transition: border-color 0.3s ease;
+    }
+
+    .card-border:hover {
+      border-color: #3f3f46;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body class="relative overflow-x-hidden selection:bg-white selection:text-black">
+  <div class="glow-bg"></div>
+  
+  <nav class="sticky top-0 z-50 backdrop-blur-md border-b border-border bg-background/80">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="font-serif font-bold text-xl tracking-tight">EmailAPI</div>
+      <div class="hidden md:flex space-x-8 text-sm font-medium text-secondary">
+        <a href="#" class="hover:text-primary transition-colors">Features</a>
+        <a href="#" class="hover:text-primary transition-colors">Documentation</a>
+        <a href="#" class="hover:text-primary text-primary transition-colors">Pricing</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button class="text-sm font-medium text-secondary hover:text-primary transition-colors">Log in</button>
+        <button class="text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+    <div class="text-center mb-24 max-w-3xl mx-auto">
+      <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+        Pricing for <br/> <span class="text-secondary text-4xl md:text-6xl">builders and scale-ups</span>
+      </h1>
+      <p class="text-lg text-secondary mb-10 max-w-xl mx-auto">
+        Start for free, scale to billions. Our pricing is designed to grow with your application's needs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      
+      <!-- Free Tier -->
+      <div class="bg-card rounded-2xl p-8 card-border flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">Free</h3>
+        <div class="text-4xl font-bold mb-6 font-serif">$0 <span class="text-lg text-secondary font-sans font-normal">/ mo</span></div>
+        <ul class="space-y-4 mb-8 text-sm text-secondary flex-1">
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 3,000 emails / mo</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 1 domain</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Basic support</li>
+        </ul>
+        <button class="w-full py-2 px-4 rounded-lg bg-[#18181b] hover:bg-[#27272a] text-white text-sm font-medium transition-colors card-border">Get Started</button>
+      </div>
+
+      <!-- Pro Tier -->
+      <div class="bg-card rounded-2xl p-8 card-border flex flex-col relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-20"></div>
+        <h3 class="text-xl font-semibold mb-2">Pro</h3>
+        <div class="text-4xl font-bold mb-6 font-serif">$20 <span class="text-lg text-secondary font-sans font-normal">/ mo</span></div>
+        <ul class="space-y-4 mb-8 text-sm text-secondary flex-1">
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 50,000 emails / mo</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 10 domains</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Priority support</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 5 Webhooks</li>
+        </ul>
+        <button class="w-full py-2 px-4 rounded-lg bg-white text-black hover:bg-gray-200 text-sm font-medium transition-colors">Get Started</button>
+      </div>
+
+      <!-- Scale Tier -->
+      <div class="bg-card rounded-2xl p-8 card-border flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">Scale</h3>
+        <div class="text-4xl font-bold mb-6 font-serif">$90 <span class="text-lg text-secondary font-sans font-normal">/ mo</span></div>
+        <ul class="space-y-4 mb-8 text-sm text-secondary flex-1">
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 100,000 emails / mo</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> 1,000 domains</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Dedicated Slack channel</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Dedicated IP add-on</li>
+        </ul>
+        <button class="w-full py-2 px-4 rounded-lg bg-[#18181b] hover:bg-[#27272a] text-white text-sm font-medium transition-colors card-border">Get Started</button>
+      </div>
+
+      <!-- Enterprise Tier -->
+      <div class="bg-card rounded-2xl p-8 card-border flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+        <div class="text-4xl font-bold mb-6 font-serif">Custom</div>
+        <ul class="space-y-4 mb-8 text-sm text-secondary flex-1">
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Volume discounts</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Custom SLAs</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Dedicated CSM</li>
+          <li class="flex items-center"><span class="text-white mr-3">✓</span> Single Sign-On</li>
+        </ul>
+        <button class="w-full py-2 px-4 rounded-lg bg-[#18181b] hover:bg-[#27272a] text-white text-sm font-medium transition-colors card-border">Contact Sales</button>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

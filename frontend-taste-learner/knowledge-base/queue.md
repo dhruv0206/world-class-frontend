@@ -11,4 +11,4 @@
 - [!] campsite.design (browser failed) — Ultra-clean, linear-like aesthetic with sophisticated spacing and typography.
 - [x] krea.ai — Beautiful dark-mode AI tool with seamless WebGL canvas integration.
 - [x] reflect.app — Premium note-taking tool with elegant minimalist design and sharp contrasts.
-- [ ] resend.com — Developer-focused landing page with flawless executing of the modern developer aesthetic.
+- [x] resend.com — Developer-focused landing page with flawless executing of the modern developer aesthetic.
