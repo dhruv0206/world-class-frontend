@@ -1,7 +1,7 @@
 ---
 name: frontend-generator
 description: Generates production-grade Next.js frontends that feel like they were built by a world-class design team. Reads from an accumulated knowledge base of elite site analyses. Output should not feel like AI slop.
-version: 0.1.4
+version: 0.1.5
 author: hermes-frontend-skill
 license: MIT
 metadata:
@@ -251,3 +251,8 @@ Output is good when:
 - Animations trigger on scroll correctly
 - Mobile layout doesn't break
 - A human looking at it wouldn't immediately guess AI generated it
+
+### Learned from amie.so
+1. Mix crisp typography with hand-drawn SVG annotations/arrows (e.g. #888888 curved arrows) overlapping clean SaaS components to add human touch.
+2. Use two-tone typography in H2 headlines (e.g. first half black, second half grey) to create contrast within a single sentence.
+3. Place a massive, central product showcase image (with subtle #1ea1f1 shadow) immediately below the hero section instead of jumping straight to features.

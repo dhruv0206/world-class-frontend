@@ -16,3 +16,7 @@
 - Pattern: Scattered, floating app icons around central text causing depth/parallax.
 - Trigger: Scroll / load
 - Replicate with: Framer Motion `y` transforms and absolute positioning with staggered delays.
+## From amie.so (v0.7.8)
+- Pattern: Subtle hand-drawn SVG arrows pointing to UI elements
+- Trigger: scroll / load
+- Replicate with: Absolute positioned SVG elements overlapping relative containers
