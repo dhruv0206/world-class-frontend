@@ -15,4 +15,9 @@
 - [x] amie.so — Joyful interactions and premium feel
 - [!] resend.com (browser failed) - Developer tool perfection with brutalist-minimal fusion
 - [!] cron.com (browser failed) — Next-level calendar interactions and typography
-- [x] basecamp.com — Distinctive layout and typography
+## Tier — Discovered [2026-09-20] from [SiteInspire]
+- [ ] monocle.com — Editorial, high-end typography and structured layout.
+- [ ] aesop.com — Minimalist ecommerce with beautiful spatial arrangement.
+- [ ] stripe.com — Classic premium SaaS design with intricate gradients.
+- [ ] cash.app — Distinctive 3D graphics and bold editorial layout.
+- [ ] okeeffe.com — Elegant portfolio showcasing high-end interactions.
